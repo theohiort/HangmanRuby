@@ -75,7 +75,7 @@ currenthangmanstatus = hangman_status_array[hangmanindex]
 
 while currenthangmanstatus != hangman_status_array[5] && array_of_displayed_letters != secret_word_array
 
-puts "enter a letter that you would like to guess!"
+puts "enter a letter that you would like to guess! enter \"quit\" to quit."
 
 currenthangmanstatus = hangman_status_array[hangmanindex]
 puts currenthangmanstatus
@@ -108,11 +108,23 @@ else
         array_of_displayed_letters[x] = secret_word_array[x]
     end
 end
-
 system("cls")
 end
 
 if input != "quit"  
+    puts currenthangmanstatus
+    print "Det hemliga ordet: "
+    for x in array_of_displayed_letters
+        print x
+    end
+    puts "\n==========================="
+    print "Felgissade bokstäver: "
+    for x in wrongletters
+        print x.upcase
+        print ", "
+    end
+    puts 
+    puts
     if array_of_displayed_letters == secret_word_array
         puts "congratulations! You guessed the word before the man was hanged!"
     else
@@ -125,5 +137,5 @@ playagain= gets.chomp
 if playagain != "y" 
     break
 end
-
+system("cls")
 end
