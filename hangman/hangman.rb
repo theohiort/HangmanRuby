@@ -87,7 +87,7 @@ end
 
 puts "\n==========================="
 
-print "Gissade bokstäver: "
+print "Felgissade bokstäver: "
 for x in wrongletters
     print x
 end
@@ -121,7 +121,7 @@ end
 
 puts "play again? y/n"
 playagain= gets.chomp 
-if playagain != y 
+if playagain != "y" 
     break
 end
 
