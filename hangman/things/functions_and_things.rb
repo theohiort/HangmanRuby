@@ -14,4 +14,3 @@ def indexes_of_char(letter, array)
         return output
     end
 end
-

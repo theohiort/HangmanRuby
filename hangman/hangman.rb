@@ -67,7 +67,7 @@ wrongletters = []
 array_of_displayed_letters = []
 
 for x in secret_word_array
-    array_of_displayed_letters << "*"
+    array_of_displayed_letters << "?"
 end
 
 currenthangmanstatus = hangman_status_array[hangmanindex]
@@ -89,7 +89,8 @@ puts "\n==========================="
 
 print "Felgissade bokstäver: "
 for x in wrongletters
-    print x
+    print x.upcase
+    print " "
 end
 puts
 
