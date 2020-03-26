@@ -90,7 +90,7 @@ puts "\n==========================="
 print "Felgissade bokstäver: "
 for x in wrongletters
     print x.upcase
-    print " "
+    print ", "
 end
 puts
 
